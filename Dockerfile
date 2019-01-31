@@ -29,8 +29,9 @@ ENV PERL5LIB /work/po4a-${PO4A_VERSION}/lib/:$PERL5LIB
 ENV PATH     /work/po4a-${PO4A_VERSION}/:$PATH
 
 WORKDIR /work
-RUN curl -LO https://github.com/mquinson/po4a/releases/download/v${PO4A_VERSION}/po4a-${PO4A_VERSION}.tar.gz
-RUN tar zxvf po4a-${PO4A_VERSION}.tar.gz
+RUN curl -LO https://github.com/mquinson/po4a/releases/download/v${PO4A_VERSION}/po4a-${PO4A_VERSION}.tar.gz && \
+    tar zxvf po4a-${PO4A_VERSION}.tar.gz && \
+    rm -f po4a-${PO4A_VERSION}.tar.gz
 
 WORKDIR /work/po4a-${PO4A_VERSION}
 RUN cpan
