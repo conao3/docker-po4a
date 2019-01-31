@@ -20,6 +20,7 @@ Depend Docker.
 #+end_src
 
 * How to use?
+** Using po4a
 Run ~po4a-docker~ like as below.
 
 #+begin_src bash
@@ -44,4 +45,36 @@ Or, alias it.
   This is free software; see source code for copying
   conditions. There is NO warranty; not even for
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#+end_src
+
+** Using other bundled tool
+Since ENTRYPOINT is ~po4a~, override ENTRYPOINT to use other ~po4a~ tool.
+#+begin_src emacs-lisp
+  $ docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-translate --version
+  po4a-translate version 0.55.
+  Written by Martin Quinson and Denis Barbier.
+
+  Copyright © 2002-2018 Software in the Public Interest, Inc.
+  This is free software; see source code for copying
+  conditions. There is NO warranty; not even for
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+  $ alias po4a-translate0.55='docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-translate'
+  $ po4a-translate0.55 --version
+  po4a-translate version 0.55.
+  Written by Martin Quinson and Denis Barbier.
+
+  Copyright © 2002-2018 Software in the Public Interest, Inc.
+  This is free software; see source code for copying
+  conditions. There is NO warranty; not even for
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#+end_src
+
+Below tools are all ~po4a~ bundled tools.
+#+begin_src bash
+  alias po4a0.55='docker container run -i --rm conao3/po4a:0.55'
+  alias po4a-gettextize0.55='docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-gettextize'
+  alias po4a-normalize0.55='docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-normalize'
+  alias po4a-translate0.55='docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-translate'
+  alias po4a-updatepo0.55='docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-updatepo'
 #+end_src
