@@ -39,5 +39,4 @@ RUN perl Build.PL
 
 RUN po4a --version
 
-ENTRYPOINT ["/usr/local/bin/po4a"]
-CMD ["/bin/bash"]
+CMD ["po4a"]
