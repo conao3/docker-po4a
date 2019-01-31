@@ -1,0 +1,9 @@
+language: generic
+dist: trusty
+
+git:
+  depth: 1
+
+script:
+  - make build
+  - echo '{"version":100}' | docker container run -i --rm conao3/jq:latest '.version'
