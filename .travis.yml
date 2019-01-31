@@ -6,4 +6,4 @@ git:
 
 script:
   - make build
-  - echo '{"version":100}' | docker container run -i --rm conao3/jq:latest '.version'
+  - docker container run -i --rm conao3/po4a:latest po4a --version
