@@ -28,14 +28,12 @@ ENV GCSTRING  N/NE/NEZUMI/Unicode-LineBreak-2019.001.tar.gz
 ENV PERL5LIB /work/po4a-${PO4A_VERSION}/lib/:$PERL5LIB
 ENV PATH     /work/po4a-${PO4A_VERSION}/:$PATH
 
-WORKDIR /
-RUN cpan
-
 WORKDIR /work
 RUN curl -LO https://github.com/mquinson/po4a/releases/download/v${PO4A_VERSION}/po4a-${PO4A_VERSION}.tar.gz
 RUN tar zxvf po4a-${PO4A_VERSION}.tar.gz
 
 WORKDIR /work/po4a-${PO4A_VERSION}
+RUN cpan
 RUN cpan ${INCLATEST} ${BUILD} ${YAMLTINY} ${GETTEXT} ${READKEY} ${WARPI18N} ${CHARSET} ${GCSTRING}
 RUN perl Build.PL
 
