@@ -40,4 +40,4 @@ RUN perl Build.PL
 
 RUN po4a --version
 
-CMD ["po4a"]
+ENTRYPOINT ["po4a"]
