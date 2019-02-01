@@ -25,15 +25,13 @@ ENV WRAPI18N  K/KU/KUBOTA/Text-WrapI18N-0.06.tar.gz
 ENV CHARSET   N/NE/NEZUMI/MIME-Charset-1.012.2.tar.gz
 ENV GCSTRING  N/NE/NEZUMI/Unicode-LineBreak-2019.001.tar.gz
 
-ENV PERL5LIB /work/po4a-${PO4A_VERSION}/lib/:$PERL5LIB
-ENV PATH     /work/po4a-${PO4A_VERSION}/:$PATH
+ENV PERL5LIB /work/po4a/lib/:$PERL5LIB
+ENV PATH     /work/po4a/:$PATH
 
 WORKDIR /work
-RUN curl -LO https://github.com/mquinson/po4a/releases/download/v${PO4A_VERSION}/po4a-${PO4A_VERSION}.tar.gz && \
-    tar zxvf po4a-${PO4A_VERSION}.tar.gz && \
-    rm -f po4a-${PO4A_VERSION}.tar.gz
+RUN git clone --depth=1 -b v${PO4A_VERSION} https://github.com/mquinson/po4a.git
 
-WORKDIR /work/po4a-${PO4A_VERSION}
+WORKDIR /work/po4a
 RUN cpan
 RUN cpan ${INCLATEST} ${BUILD} ${YAMLTINY} ${GETTEXT} ${READKEY} ${WARPI18N} ${CHARSET} ${GCSTRING}
 RUN perl Build.PL
