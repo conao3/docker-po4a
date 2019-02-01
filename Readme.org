@@ -1,13 +1,13 @@
 #+author: conao
 #+date: <2019-01-31 Thu>
 
-[[https://github.com/conao3/po4a-docker][https://img.shields.io/github/tag/conao3/po4a-docker.svg?style=flat-square]]
-[[https://travis-ci.org/conao3/po4a-docker][https://img.shields.io/travis/conao3/po4a-docker/master.svg?style=flat-square]]
-[[https://github.com/conao3/po4a-docker][https://img.shields.io/github/license/conao3/po4a-docker.svg?style=flat-square]]
-[[https://github.com/conao3/github-header][https://files.conao3.com/github-header/gif/po4a-docker.gif]]
+[[https://github.com/conao3/docker-po4a][https://img.shields.io/github/tag/conao3/docker-po4a.svg?style=flat-square]]
+[[https://travis-ci.org/conao3/docker-po4a][https://img.shields.io/travis/conao3/docker-po4a/master.svg?style=flat-square]]
+[[https://github.com/conao3/docker-po4a][https://img.shields.io/github/license/conao3/docker-po4a.svg?style=flat-square]]
+[[https://github.com/conao3/github-header][https://files.conao3.com/github-header/gif/docker-po4a.gif]]
 
 * What is it?
-~po4a-docker~ is standalone [[https://github.com/mquinson/po4a][po4a]].
+~docker-po4a~ is standalone [[https://github.com/mquinson/po4a][po4a]].
 
 * Dependency
 Depend Docker.
@@ -21,7 +21,7 @@ Depend Docker.
 
 * How to use?
 ** Using po4a
-Run ~po4a-docker~ like as below.
+Run ~docker-po4a~ like as below.
 
 #+begin_src bash
   $ docker container run -i --rm conao3/po4a:0.55 --version
