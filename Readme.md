@@ -1,11 +1,13 @@
 
-![https://img.shields.io/github/tag/conao3/docker-po4a.svg?style=flat-square](https://github.com/conao3/docker-po4a)
-![https://img.shields.io/travis/conao3/docker-po4a/master.svg?style=flat-square](https://travis-ci.org/conao3/docker-po4a)
-![https://img.shields.io/github/license/conao3/docker-po4a.svg?style=flat-square](https://github.com/conao3/docker-po4a)
+[![][1]](https://github.com/conao3/docker-po4a)
+[![][2]](https://travis-ci.org/conao3/docker-po4a)
+![](https://img.shields.io/github/license/conao3/docker-po4a.svg?style=flat-square)(https://github.com/conao3/docker-po4a)
 ![](https://img.shields.io/docker/pulls/conao3/jq.svg?style=flat-square)
 ![](https://files.conao3.com/github-header/gif/docker-po4a.gif)(https://github.com/conao3/github-header)
 
-1. [docker-po4a](#docker-po4a)
+[1]: https://img.shields.io/github/tag/conao3/docker-po4a.svg?style=flat-square 
+[2]: https://img.shields.io/travis/conao3/docker-po4a/master.svg?style=flat-square
+
 1. [Install](#install)
 1. [Usage](#usage)
     1. [Using po4a](#using-po4a)
