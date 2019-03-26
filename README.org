@@ -1,90 +1,130 @@
+#+author: conao3
+#+date: <2018-10-25 Thu>
 
-[![][1]](https://github.com/conao3/docker-po4a)
-[![][2]](https://travis-ci.org/conao3/docker-po4a)
-![](https://img.shields.io/github/license/conao3/docker-po4a.svg?style=flat-square)(https://github.com/conao3/docker-po4a)
-![](https://img.shields.io/docker/pulls/conao3/jq.svg?style=flat-square)
-![](https://files.conao3.com/github-header/gif/docker-po4a.gif)(https://github.com/conao3/github-header)
+[[https://github.com/conao3/docker-po4a][https://raw.githubusercontent.com/conao3/files/master/header/png/docker-po4a.png]]
+[[https://github.com/conao3/docker-po4a/blob/master/LICENSE][https://img.shields.io/github/license/conao3/docker-po4a.svg?style=flat-square]]
+[[https://github.com/conao3/docker-po4a/releases][https://img.shields.io/github/tag/conao3/docker-po4a.svg?style=flat-square]]
+[[https://travis-ci.org/conao3/docker-po4a][https://img.shields.io/travis/conao3/docker-po4a/master.svg?style=flat-square]]
+[[https://app.codacy.com/project/conao3/docker-po4a/dashboard][https://img.shields.io/codacy/grade/584837007e474772986ff903b8cdeb03.svg?logo=codacy&style=flat-square]]
+[[https://www.patreon.com/conao3][https://img.shields.io/badge/patreon-@conao3-orange.svg?logo=patreon&style=flat-square]]
+[[https://twitter.com/conao_3][https://img.shields.io/badge/twitter-@conao__3-blue.svg?logo=twitter&style=flat-square]]
+[[https://join.slack.com/t/conao3-support/shared_invite/enQtNTg2MTY0MjkzOTU0LTFjOTdhOTFiNTM2NmY5YTE5MTNlYzNiOTE2MTZlZWZkNDEzZmRhN2E0NjkwMWViZTZiYjA4MDUxYTUzNDZiNjY][https://img.shields.io/badge/chat-on_slack-blue.svg?logo=slack&style=flat-square]]
 
-[1]: https://img.shields.io/github/tag/conao3/docker-po4a.svg?style=flat-square 
-[2]: https://img.shields.io/travis/conao3/docker-po4a/master.svg?style=flat-square
+* Table of Contents
+- [[#background][Background]]
+- [[#install][Install]]
+- [[#usage][Usage]]
+- [[#information][Information]]
+  - [[#donation][Donation]]
+  - [[#community][Community]]
+  - [[#contribution][Contribution]]
+  - [[#license][License]]
+  - [[#author][Author]]
+  - [[#contributors][Contributors]]
 
-1. [Install](#install)
-1. [Usage](#usage)
-    1. [Using po4a](#using-po4a)
-    1. [Using other bundled tool](#using-other-bundled-tool)
+* Background
+~docker-po4a~ is standalone [po4a](https://github.com/mquinson/po4a).
 
-# docker-po4a
-`docker-po4a` is standalone [po4a](https://github.com/mquinson/po4a).
-
-# Install
+* Install
 Depend Docker.
 
-```bash
-brew install docker
-brew cask install docker
+#+begin_src bash
+  brew install docker
+  brew cask install docker
 
-# docker start-up test
-docker version
-```
+  # docker start-up test
+  docker version
+#+end_src
 
-# Usage
-## Using po4a
-Run `docker-po4a` like as below.
+* Usage
+** Using po4a
+Run ~docker-po4a~ like as below.
 
-```bash
-docker container run -i --rm conao3/po4a:0.55 --version
-    po4a version 0.55.
-    Written by Martin Quinson and Denis Barbier.
+#+begin_src bash
+  docker container run -i --rm conao3/po4a:0.55 --version
+      po4a version 0.55.
+      Written by Martin Quinson and Denis Barbier.
 
-    Copyright © 2002-2018 Software in the Public Interest, Inc.
-    This is free software; see source code for copying
-    conditions. There is NO warranty; not even for
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-```
+      Copyright © 2002-2018 Software in the Public Interest, Inc.
+      This is free software; see source code for copying
+      conditions. There is NO warranty; not even for
+      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#+end_src
 
 Or, alias it.
 
-```bash
-alias po4a0.55='docker container run -i --rm conao3/po4a:0.55'
-po4a0.55 --version
-    po4a version 0.55.
-    Written by Martin Quinson and Denis Barbier.
+#+begin_src bash
+  alias po4a0.55='docker container run -i --rm conao3/po4a:0.55'
+  po4a0.55 --version
+      po4a version 0.55.
+      Written by Martin Quinson and Denis Barbier.
 
-    Copyright © 2002-2018 Software in the Public Interest, Inc.
-    This is free software; see source code for copying
-    conditions. There is NO warranty; not even for
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-```
+      Copyright © 2002-2018 Software in the Public Interest, Inc.
+      This is free software; see source code for copying
+      conditions. There is NO warranty; not even for
+      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#+end_src
 
-## Using other bundled tool
-Since ENTRYPOINT is `po4a`, override ENTRYPOINT to use other `po4a` tool.
+** Using other bundled tool
+Since ENTRYPOINT is ~po4a~, override ENTRYPOINT to use other ~po4a~ tool.
 
-```bash
-docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-translate --version
-    po4a-translate version 0.55.
-    Written by Martin Quinson and Denis Barbier.
+#+begin_src bash
+  docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-translate --version
+      po4a-translate version 0.55.
+      Written by Martin Quinson and Denis Barbier.
     
-    Copyright © 2002-2018 Software in the Public Interest, Inc.
-    This is free software; see source code for copying
-    conditions. There is NO warranty; not even for
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      Copyright © 2002-2018 Software in the Public Interest, Inc.
+      This is free software; see source code for copying
+      conditions. There is NO warranty; not even for
+      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
     
-alias po4a-translate0.55='docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-translate'
-po4a-translate0.55 --version
-    po4a-translate version 0.55.
-    Written by Martin Quinson and Denis Barbier.
+  alias po4a-translate0.55='docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-translate'
+  po4a-translate0.55 --version
+      po4a-translate version 0.55.
+      Written by Martin Quinson and Denis Barbier.
     
-    Copyright © 2002-2018 Software in the Public Interest, Inc.
-    This is free software; see source code for copying
-    conditions. There is NO warranty; not even for
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-```
-Below tools are all `po4a` bundled tools.
+      Copyright © 2002-2018 Software in the Public Interest, Inc.
+      This is free software; see source code for copying
+      conditions. There is NO warranty; not even for
+      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#+end_src
 
-```bash
-alias po4a0.55='docker container run -i --rm conao3/po4a:0.55'
-alias po4a-gettextize0.55='docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-gettextize'
-alias po4a-normalize0.55='docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-normalize'
-alias po4a-translate0.55='docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-translate'
-alias po4a-updatepo0.55='docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-updatepo'
-```
+Below tools are all ~po4a~ bundled tools.
+
+#+begin_src bash
+  alias po4a0.55='docker container run -i --rm conao3/po4a:0.55'
+  alias po4a-gettextize0.55='docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-gettextize'
+  alias po4a-normalize0.55='docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-normalize'
+  alias po4a-translate0.55='docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-translate'
+  alias po4a-updatepo0.55='docker container run -i --rm  --entrypoint="" conao3/po4a:0.55 po4a-updatepo'
+#+end_src
+
+* Information
+** Donation
+I love OSS and I am dreaming of working on it as *full-time* job.
+
+*With your support*, I will be able to spend more time at OSS!
+
+[[https://www.patreon.com/conao3][https://c5.patreon.com/external/logo/become_a_patron_button.png]]
+
+** Community
+All feedback and suggestions are welcome!
+
+You can use github issues, but you can also use [[https://join.slack.com/t/conao3-support/shared_invite/enQtNTg2MTY0MjkzOTU0LTFjOTdhOTFiNTM2NmY5YTE5MTNlYzNiOTE2MTZlZWZkNDEzZmRhN2E0NjkwMWViZTZiYjA4MDUxYTUzNDZiNjY][Slack]]
+if you want a more casual conversation.
+
+** Contribution
+Feel free to send PR!
+
+** License
+#+begin_example
+  Affero General Public License Version 3 (AGPLv3)
+  Copyright (c) Naoya Yamashita - https://conao3.com
+  https://github.com/conao3/docker-po4a/blob/master/LICENSE
+#+end_example
+
+** Author
+- Naoya Yamashita ([[https://github.com/conao3][conao3]])
+
+** Contributors
+- Not yet... Now send PR and add your name!!
