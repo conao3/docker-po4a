@@ -23,7 +23,7 @@
   - [[#contributors][Contributors]]
 
 * Description
-~docker-po4a~ is standalone [po4a](https://github.com/mquinson/po4a).
+~docker-po4a~ is standalone [[https://github.com/mquinson/po4a][po4a]].
 
 * Install
 Depend Docker.
