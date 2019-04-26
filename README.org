@@ -1,7 +1,7 @@
 #+author: conao3
 #+date: <2018-10-25 Thu>
 
-[[https://github.com/conao3/docker-po4a][https://raw.githubusercontent.com/conao3/files/master/header/png/docker-po4a.png]]
+[[https://github.com/conao3/docker-po4a][https://raw.githubusercontent.com/conao3/files/master/blob/headers/png/docker-po4a.png]]
 [[https://github.com/conao3/docker-po4a/blob/master/LICENSE][https://img.shields.io/github/license/conao3/docker-po4a.svg?style=flat-square]]
 [[https://github.com/conao3/docker-po4a/releases][https://img.shields.io/github/tag/conao3/docker-po4a.svg?style=flat-square]]
 [[https://travis-ci.org/conao3/docker-po4a][https://img.shields.io/travis/conao3/docker-po4a/master.svg?style=flat-square]]
@@ -11,7 +11,7 @@
 [[https://join.slack.com/t/conao3-support/shared_invite/enQtNTg2MTY0MjkzOTU0LTFjOTdhOTFiNTM2NmY5YTE5MTNlYzNiOTE2MTZlZWZkNDEzZmRhN2E0NjkwMWViZTZiYjA4MDUxYTUzNDZiNjY][https://img.shields.io/badge/chat-on_slack-blue.svg?logo=slack&style=flat-square]]
 
 * Table of Contents
-- [[#background][Background]]
+- [[#description][Description]]
 - [[#install][Install]]
 - [[#usage][Usage]]
 - [[#information][Information]]
@@ -22,7 +22,7 @@
   - [[#author][Author]]
   - [[#contributors][Contributors]]
 
-* Background
+* Description
 ~docker-po4a~ is standalone [po4a](https://github.com/mquinson/po4a).
 
 * Install
